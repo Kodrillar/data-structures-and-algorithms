@@ -37,11 +37,34 @@ function checkDuplicate(array) {
     
 }
 
-const containsDuplicate = checkDuplicate(inputArray);
+const containsDuplicate = checkDuplicate2(inputArray);
 console.log(containsDuplicate);
 
 /**
- * Improve time complexity:
+ * Improve time complexity(not really):
+ * This is flawed by larger array inputs.
  */
+
+function checkDuplicate2(array) {
+    let i = 0;
+    let j = 0;
+    let lengthOfList = array.length -1;
+
+    while(array[i] || array[i] === 0){
+        
+        if(i!=j && array[i] === array[j]){
+            return true;
+        } else {
+            if(j < lengthOfList){
+                j++;
+            }else{
+                i++;
+                j=0;             
+            }
+        }
+    }
+
+    return false;
+}
 
 

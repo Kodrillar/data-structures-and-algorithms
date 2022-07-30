@@ -1,8 +1,8 @@
 void main(List<String> args) {
   """
-  Returns true if input(array) has a duplicate  otherwise, false;
-  const array1 = [2, 3, 6, 2,]  true
-  const array2 = [1, 4, 5, 2]   false 
+  Returns true if input(list) has a duplicate  otherwise, false;
+  const list1 = [2, 3, 6, 2]  true
+  const list2 = [1, 4, 5, 2]   false 
 
  """;
 
@@ -18,8 +18,8 @@ void main(List<String> args) {
 bool checkDuplicate(List input) {
   """
     Where;
-        i = array index in first loop;
-        j = array index in second loop;
+        i = list index in first loop;
+        j = list index in second loop;
   """;
 
   for (var i = 0; i < input.length; i++) {
