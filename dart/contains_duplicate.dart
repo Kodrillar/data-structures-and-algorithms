@@ -9,7 +9,7 @@ void main(List<String> args) {
   const arrayInput = [9, 5, 6, 9];
   const falseArrayInput = [4, 7, 2, 1];
 
-  bool containsDuplicate = checkDuplicate(falseArrayInput);
+  bool containsDuplicate = checkDuplicate2(arrayInput);
   print(containsDuplicate);
 }
 
@@ -34,5 +34,14 @@ bool checkDuplicate(List input) {
 
 // improved Solution
 bool checkDuplicate2(List input) {
+  var set = Set();
+
+  for (var element in input) {
+    if (set.contains(element)) {
+      return true;
+    }
+    set.add(element);
+  }
+
   return false;
 }
