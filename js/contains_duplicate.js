@@ -41,8 +41,8 @@ const containsDuplicate = checkDuplicate2(inputArray);
 console.log(containsDuplicate);
 
 /**
- * Improve time complexity(not really):
- * This is flawed by larger array inputs.
+ * Solution 2:
+ * This is flawed by larger array inputs. (slower)
  */
 
 function checkDuplicate2(array) {
@@ -67,4 +67,19 @@ function checkDuplicate2(array) {
     return false;
 }
 
+/**
+ * Improved solution: Time complexity & space complexity
+ */
 
+function checkDuplicate3(array) {
+   
+    const set = new Set();
+
+    for(const element of array){
+        if(set.has(element)){
+            return true;
+        }
+        set.add(element);
+    }
+ 
+}
